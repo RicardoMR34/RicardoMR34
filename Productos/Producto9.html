@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MANGACKEET</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      /* Estilos personalizados */
+      .navbar-brand img {
+        margin-right: 20px;
+        background-color: #537faa;
+        color: #74a3d9;
+      }
+
+      .card {
+        transition: transform 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .footer {
+        background-color: #537faa;
+        color: #74a3d9;
+      }
+    </style>
+  </head>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-M595ZQX5NX"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-M595ZQX5NX");
+  </script>
+  <body onload="cantidad()">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <!-- Logotipo -->
+        <a class="navbar-brand" href="../index.html">
+          <img
+            src="../logo.png"
+            alt="Logo"
+            width="50"
+            height="50"
+            class="d-inline-block align-top"
+          />
+          MANGACKEET
+        </a>
+        <!-- Botón para dispositivos móviles -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Enlaces de navegación -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownProductos"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Categorías
+              </a>
+              <div
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownProductos"
+              >
+                <a class="dropdown-item" href="#">Mangas</a>
+                <a class="dropdown-item" href="#">Shonen</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="../index.html"
+                  >Ver todos los productos</a
+                >
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownPerfil"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Perfil
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownPerfil">
+                <a class="dropdown-item" href="../registro.html">Registro</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="../login.html"
+                  >Inicio de Sesión</a
+                >
+              </div>
+            </li>
+          </ul>
+          <!-- Lista de deseos y carrito de compras -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../listadeseos.html"
+                ><i class="far fa-heart"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../carrito.html"
+                ><i class="fas fa-shopping-cart"></i
+              ></a>
+            </li>
+          </ul>
+          <!-- Formulario de búsqueda -->
+          <form class="form-inline my-2 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Buscar productos"
+              aria-label="Buscar"
+            />
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+              Buscar
+            </button>
+          </form>
+          <a
+            href="https://www.facebook.com/profile.php?id=61558172912882&is_tour_dismissed"
+            class="btn"
+            target="_blank"
+          >
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/018/930/476/non_2x/facebook-logo-facebook-icon-transparent-free-png.png"
+              alt="Icono de Facebook"
+              style="width: 40px; height: 40px; vertical-align: middle"
+            />
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container mt-4">
+      <div class="row">
+        <!-- Carrusel de Fotos -->
+        <div class="col-md-6">
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <ol class="carousel-indicators">
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="1"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="2"
+              ></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1664562090i/61340793.jpg"
+                  class="d-block w-100"
+                  alt="Imagen 1"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://somoskudasai.com/wp-content/uploads/2023/12/Visual-1.jpg"
+                  class="d-block w-100"
+                  alt="Imagen 2"
+                />
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <!-- Detalles del producto -->
+          <div class="col-md-12">
+            <h2>RuriDragon Vol.1</h2>
+            <p><strong>Precio:</strong> $130</p>
+            <p>
+              <strong>Descripción:</strong> Esta es la historia de una dragona
+              perezosa, que se esfuerza, pero preferiría no hacerlo. ¡Comienza
+              una nueva serie!
+            </p>
+            <p id="Ncant"><strong>Cantidad Disponible:</strong></p>
+            <!-- Formulario para seleccionar la cantidad -->
+            <form>
+              <div class="form-group">
+                <label for="cantidad">Cantidad:</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="cantidad"
+                  min="1"
+                  value="1"
+                />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary mr-2"
+                onclick="addToCart()"
+              >
+                <i class="fas fa-cart-plus"></i> Añadir al Carrito
+              </button>
+              <button
+                type="submit"
+                class="btn btn-danger"
+                onclick="addToWishlist()"
+              >
+                <i class="far fa-heart"></i> Añadir a Favoritos
+              </button>
+            </form>
+          </div>
+          <!-- Sección de reseñas -->
+          <div class="col-md-12 mt-4">
+            <h3>Reseñas</h3>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Reseña 1</h5>
+                <p class="card-text">
+                  Excelente manga, definitivamente vale la pena leerlo. Los
+                  personajes son increíbles y la historia es emocionante.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Usuario: Usuario123</small>
+                </p>
+              </div>
+            </div>
+            <div class="card mt-2">
+              <div class="card-body">
+                <h5 class="card-title">Reseña 2</h5>
+                <p class="card-text">
+                  Uno de los mejores mangas que he leído. La trama es muy
+                  interesante y los dibujos son impresionantes.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Usuario: AnimeFan99</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-3 mb-3">
+      <h3>Crear Reseña</h3>
+      <form>
+        <div class="form-group">
+          <label for="nombreUsuario">Nombre de Usuario:</label>
+          <input type="text" class="form-control" id="nombreUsuario" />
+        </div>
+        <div class="form-group">
+          <label for="textoReseña">Texto de la Reseña:</label>
+          <textarea class="form-control" id="textoReseña" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar Reseña</button>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+      <div class="container d-flex justify-content-around">
+        <a class="nav-link" href="../contacto.html">Contacto</a>
+
+        <p>&copy; MANGACKEET 2024</p>
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61558172912882&is_tour_dismissed"
+          class="btn"
+          target="_blank"
+        >
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/018/930/476/non_2x/facebook-logo-facebook-icon-transparent-free-png.png"
+            alt="Icono de Facebook"
+            style="width: 40px; height: 40px; vertical-align: middle"
+          />
+        </a>
+      </div>
+    </footer>
+    <script>
+      function addToWishlist() {
+        fetch("../productos.json")
+          .then((response) => response.json())
+          .then((data) => {
+            const product = data.products.find((p) => p.id === 9);
+            if (product) {
+              let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+              const ptemp = wishlist.find((pt) => pt.id === product.id);
+              if (ptemp) {
+                alert("El producto ya se encuentra en la lista de deseos");
+              } else {
+                wishlist.push(product);
+                localStorage.setItem("wishlist", JSON.stringify(wishlist));
+                // Notifica al usuario que el producto se ha agregado a la lista de deseos
+                alert("Producto agregado a la lista de deseos");
+              }
+            }
+          })
+          .catch((error) => {
+            console.error("Error al obtener los datos:", error);
+          });
+      }
+
+      function addToCart() {
+        fetch("../productos.json")
+          .then((response) => response.json())
+          .then((data) => {
+            const product = data.products.find((p) => p.id === 9);
+            if (product) {
+              const cantidad = document.getElementById("cantidad");
+              let cantAgr = cantidad.value;
+              let cart = JSON.parse(localStorage.getItem("cart")) || [];
+              let found = false;
+
+              for (let item of cart) {
+                // console.log(item);
+                if (item.id === product.id) {
+                  item.quantity = parseInt(item.quantity) + parseInt(cantAgr);
+                  found = true;
+                  break;
+                }
+              }
+
+              if (!found) {
+                product.quantity = cantAgr;
+                console.log(product);
+                cart.push(product);
+              }
+
+              localStorage.setItem("cart", JSON.stringify(cart));
+              alert("Producto agregado al carrito");
+              window.location.href = "../index.html";
+            }
+          })
+          .catch((error) => {
+            console.error("Error al obtener los datos:", error);
+          });
+      }
+
+      function cantidad() {
+        fetch("../productos.json")
+          .then((response) => response.json())
+          .then((data) => {
+            const product = data.products.find((p) => p.id === 9);
+            const Ncant = document.getElementById("Ncant");
+            const text = document.createElement("span");
+            text.textContent = " " + product.stock + " Unidades";
+            Ncant.appendChild(text);
+            const cantidad = document.getElementById("cantidad");
+            cantidad.max = product.stock;
+            // console.log(product.stock);
+          })
+          .catch((error) => {
+            console.error("Error al obtener los datos:", error);
+          });
+      }
+    </script>
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </body>
+</html>

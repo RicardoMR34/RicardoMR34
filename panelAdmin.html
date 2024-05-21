@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administración</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    .container {
+      max-width: 1250px;
+    }
+    .product-column,
+    .user-column {
+      padding: 0 10px;
+    }
+    .card {
+      margin-bottom: 20px;
+    }
+    .card-title {
+      font-size: 24px;
+      margin-bottom: 0;
+    }
+    .card-body {
+      padding: 20px;
+    }
+    .card-footer {
+      padding: 10px 20px;
+      background-color: #f8f9fa;
+    }
+    .btn-edit,
+    .btn-delete {
+      margin-right: 15px;
+    }
+    .thumbnail {
+      max-width: 100%;
+      height: auto;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="header">
+      <h2 class="mb-4">Panel de Administración</h2>
+      <a href="login.html" class="btn btn-primary">Ir a Login</a>
+    </div>
+    <div class="row">
+      <!-- Columna de usuarios -->
+      <div class="col-md-4 user-column" id="user-container">
+        <h3>Usuarios</h3>
+        <ul class="list-group" id="user-list">
+          <!-- Los usuarios se cargarán aquí -->
+        </ul>
+      </div>
+
+      <!-- Columna de productos -->
+      <div class="col-md-8 product-column" id="product-container">
+        <h3>Productos</h3>
+        <div class="row" id="product-list">
+          <!-- Los productos se cargarán aquí -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de edición -->
+  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editModalLabel">Editar Producto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="editForm">
+            <div class="form-group">
+              <label for="editTitle">Título</label>
+              <input type="text" class="form-control" id="editTitle" required>
+            </div>
+            <div class="form-group">
+              <label for="editDescription">Descripción</label>
+              <textarea class="form-control" id="editDescription" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="editThumbnail">URL de la Imagen</label>
+              <input type="url" class="form-control" id="editThumbnail" required>
+            </div>
+            <input type="hidden" id="editProductId">
+            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS y dependencias -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const userContainer = document.getElementById("user-list");
+      const productContainer = document.getElementById("product-list");
+      let currentEditCard;
+
+      // Función para mostrar los usuarios
+      function showUsers(users) {
+        users.forEach((user) => {
+          const listItem = document.createElement("li");
+          listItem.classList.add("list-group-item");
+          listItem.textContent = user.name + " - " + user.email;
+          userContainer.appendChild(listItem);
+        });
+      }
+
+      // Función para mostrar los productos
+      function showProducts(products) {
+        products.forEach((product, index) => {
+          const card = document.createElement("div");
+          card.classList.add("col-md-4");
+
+          const productCard = document.createElement("div");
+          productCard.classList.add("card");
+          productCard.dataset.productId = index;
+
+          const thumbnail = document.createElement("img");
+          thumbnail.classList.add("card-img-top", "thumbnail");
+          thumbnail.src = product.thumbnail;
+          thumbnail.alt = product.title;
+          productCard.appendChild(thumbnail);
+
+          const cardBody = document.createElement("div");
+          cardBody.classList.add("card-body");
+
+          const cardTitle = document.createElement("h5");
+          cardTitle.classList.add("card-title");
+          cardTitle.textContent = product.title;
+          cardBody.appendChild(cardTitle);
+
+          const cardText = document.createElement("p");
+          cardText.classList.add("card-text");
+          cardText.textContent = product.description;
+          cardBody.appendChild(cardText);
+
+          productCard.appendChild(cardBody);
+
+          const cardFooter = document.createElement("div");
+          cardFooter.classList.add("card-footer");
+
+          const editButton = document.createElement("button");
+          editButton.classList.add("btn", "btn-primary", "btn-edit");
+          editButton.innerHTML = '<i class="fas fa-edit"></i> Editar';
+          editButton.addEventListener("click", function () {
+            currentEditCard = productCard;
+            document.getElementById("editTitle").value = product.title;
+            document.getElementById("editDescription").value = product.description;
+            document.getElementById("editThumbnail").value = product.thumbnail;
+            document.getElementById("editProductId").value = index;
+            $('#editModal').modal('show');
+          });
+          cardFooter.appendChild(editButton);
+
+          const deleteButton = document.createElement("button");
+          deleteButton.classList.add("btn", "btn-danger", "btn-delete");
+          deleteButton.innerHTML = '<i class="fas fa-trash-alt"></i> Eliminar';
+          deleteButton.addEventListener("click", function () {
+            card.remove();
+          });
+          cardFooter.appendChild(deleteButton);
+
+          productCard.appendChild(cardFooter);
+
+          card.appendChild(productCard);
+          productContainer.appendChild(card);
+        });
+      }
+
+      // Simulación de datos de usuarios
+      const users = [
+        { name: "Marco Sebastián Hernández Parada", email: "Marco@example.com" },
+        { name: "Juan Pablo Salazar González", email: "Juan@example.com" },
+        { name: "Ricardo Emmanuel Mayorga Román", email: "Ricardo@example.com" },
+        { name: "Cesar Jared Carrillo Arreola ", email: "Cesar@example.com" }
+      ];
+
+      // Mostrar usuarios y productos
+      showUsers(users);
+
+      // Realiza una solicitud HTTP para obtener el archivo JSON de productos
+      fetch('productos.json')
+        .then(response => response.json())
+        .then(data => {
+          // Una vez que se obtienen los datos, llama a la función showProducts
+          showProducts(data.products);
+        })
+        .catch(error => console.error('Error al obtener los productos:', error));
+
+      document.getElementById("editForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        const productId = document.getElementById("editProductId").value;
+        const updatedTitle = document.getElementById("editTitle").value;
+        const updatedDescription = document.getElementById("editDescription").value;
+        const updatedThumbnail = document.getElementById("editThumbnail").value;
+
+        currentEditCard.querySelector(".card-title").textContent = updatedTitle;
+        currentEditCard.querySelector(".card-text").textContent = updatedDescription;
+        currentEditCard.querySelector(".card-img-top").src = updatedThumbnail;
+
+        $('#editModal').modal('hide');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Pagina web de comercio electronico dedicada a la venta de mangas en toda la republica de mexico"
+    />
+    <meta name="author" content="Equipo 2 NE-ITA" />
+    <meta name="publisher" content="ITA" />
+    <meta name="keywords" content="MANGA KCEET, Manguita, Tienda de manga" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar Sesión</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-image: url("fondologin.png");
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      #login-container {
+        background-color: #fbfeff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgb(254, 246, 246);
+        padding: 50px;
+        width: 300px;
+      }
+      #registro-container {
+        background-color: #fbfeff;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgb(254, 246, 246);
+        padding: 50px;
+        width: 200px;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      input[type="submit"] {
+        width: 100%;
+        padding: 20px;
+        margin: 1px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        background-color: #3c87de;
+        color: #fff;
+        cursor: pointer;
+      }
+      h2 {
+        color: rgb(73, 63, 63);
+      }
+    </style>
+    <script>
+      function validarCredenciales() {
+        // Obtener los valores de usuario y contraseña del formulario
+        var usuario = document.getElementById("username").value;
+        var contraseña = document.getElementById("password").value;
+
+        // Verificar las credenciales
+        if (usuario === "Admin" && contraseña === "12345678") {
+          // Si las credenciales son correctas, redirigir a panelAdmin.html
+          window.location.href = "panelAdmin.html";
+        } else {
+          // Si las credenciales son incorrectas, redirigir a index.html
+          window.location.href = "index.html";
+        }
+
+        // Evitar que el formulario se envíe normalmente
+        return false;
+      }
+    </script>
+  </head>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-M595ZQX5NX"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-M595ZQX5NX");
+  </script>
+  <body>
+    <div id="login-container">
+      <form onsubmit="return validarCredenciales()">
+        <h2>Ingresa tu correo y contraseña para iniciar sesion</h2>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Usuario"
+          required
+        />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Contraseña"
+          required
+        />
+        <input type="submit" value="Iniciar Sesión" />
+      </form>
+      <form action="panelAdmin.html" method="get">
+        <input type="submit" value="Admin" />
+      </form>
+    </div>
+
+    <div id="registro-container">
+      <form action="registro.html" method="get">
+        <h2>Aun no tienes cuenta?</h2>
+        <input type="submit" value="Registrarse" />
+      </form>
+    </div>
+  </body>
+</html>

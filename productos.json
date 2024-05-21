@@ -1,0 +1,144 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "One piece",
+      "description": "En la Gran Era Pirata, donde los océanos rugen con la promesa de aventuras y tesoros perdidos, una leyenda brilla más que ninguna otra",
+      "price": 140,
+      "stock": 110,
+      "category": "Aventura",
+      "link": "Productos/Producto1.html",
+      "thumbnail": "https://imgsrv.crunchyroll.com/cdn-cgi/image/format=auto,fit=contain,width=480,height=720,quality=85/catalog/crunchyroll/757bae5a21039bac6ebace5de9affcd8.jpe",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/1/1.jpg",
+        "https://cdn.dummyjson.com/product-images/1/2.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Tokyo Ghoul",
+      "description": "Los habitantes de Tokio viven aterrados: en las sombras de la metrópolis se ocultan horribles monstruos que se camuflan entre la multitud, cazando y devorando seres humanos.",
+      "price": 180,
+      "stock": 90,
+      "category": "Gore",
+      "link": "Productos/Producto2.html",
+      "thumbnail": "https://imgsrv.crunchyroll.com/cdn-cgi/image/format=auto,fit=contain,width=480,height=720,quality=85/catalog/crunchyroll/6c496691df13a15aaf9be63caa7fc429.jpe",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/2/1.jpg",
+        "https://cdn.dummyjson.com/product-images/2/2.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Jujutsu Kaisen",
+      "description": "Yuuji Itadori, un estudiante de secundaria, que posee una rara habilidad física, pasa sus días visitando a su abuelo que se encontra hospitalizado. Pero un día, espíritus malditos que duermen en su escuela, se liberan y aparecen criaturas fantasmas.",
+      "price": 110,
+      "stock": 36,
+      "category": "Shonen",
+      "link": "Productos/Producto3.html",
+      "thumbnail": "https://imgsrv.crunchyroll.com/cdn-cgi/image/format=auto,fit=contain,width=480,height=720,quality=85/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/2/1.jpg",
+        "https://cdn.dummyjson.com/product-images/2/2.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Boruto - Blue Vortex",
+      "description": "La memoria colectiva de la gente ha cambiado, y ahora la Villa de la Hoja va detrás de la vida de Boruto. Pese a las adversidades, alguien ha estado esperando junto a Sasuke después de abandonar la Villa.",
+      "price": 159,
+      "stock": 123,
+      "category": "Shonen",
+      "link": "Productos/Producto4.html",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWX6EYGb1HGdzRY6OBVWU4pdvUjizl48O4HVFZJvdjIg&s",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/4/1.jpg",
+        "https://cdn.dummyjson.com/product-images/4/2.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Chainsaw Man",
+      "description": "Denji es un joven que alberga en su interior al demonio motosierra, ¡el mundialmente conocido Chainsaw Man!",
+      "price": 190,
+      "stock": 32,
+      "category": "Gore",
+      "link": "Productos/Producto5.html",
+      "thumbnail": "https://imgsrv.crunchyroll.com/cdn-cgi/image/format=auto,fit=contain,width=480,height=720,quality=85/catalog/crunchyroll/922742d9acaeba7d887ed11b6caab0e4.jpe",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/5/1.jpg",
+        "https://cdn.dummyjson.com/product-images/5/2.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Dragon Ball Super",
+      "description": "El tiempo transcurre, desde aquella gran batalla entre Goku y Majin Boo... ¡¡Ahora, en un mundo que recuperó la paz, se aproxima una nueva batalla!",
+      "price": 90,
+      "stock": 83,
+      "category": "Shonen",
+      "link": "Productos/Producto6.html",
+      "thumbnail": "https://imgsrv.crunchyroll.com/cdn-cgi/image/format=auto,fit=contain,width=480,height=720,quality=85/catalog/crunchyroll/98ea4207e23a2ea3e3af39ad641d8800.jpe",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/6/1.png",
+        "https://cdn.dummyjson.com/product-images/6/2.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Spy X Family",
+      "description": "El hábil espía Tasogare se dedicaba diariamente a cumplir misiones especiales por un mundo mejor. Un día recibe un complicado desafío... Su deber es crear una familia falsa y comenzar una nueva vida para poder cumplir la misión",
+      "price": 100,
+      "stock": 50,
+      "category": "Shonen",
+      "link": "Productos/Producto7.html",
+      "thumbnail": "https://imgsrv.crunchyroll.com/cdn-cgi/image/format=auto,fit=contain,width=480,height=720,quality=85/catalog/crunchyroll/095217fdb4f228410df09b18f151be28.jpe",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/7/1.jpg",
+        "https://cdn.dummyjson.com/product-images/7/2.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Kagurabachi",
+      "description": "Chihiro, un joven con aspiraciones de convertirse en un forjador de espadas, entrena todos los días bajo la tutela de su padre, un forjador de gran renombre.",
+      "price": 200,
+      "stock": 68,
+      "category": "Shonen",
+      "link": "Productos/Producto8.html",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/en/d/da/Kagurabachi_Volume_1_Cover.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/8/1.jpg",
+        "https://cdn.dummyjson.com/product-images/8/2.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "RuriDragon",
+      "description": "Esta es la historia de una dragona perezosa, que se esfuerza, pero preferiría no hacerlo. ¡Comienza una nueva serie!",
+      "price": 130,
+      "stock": 96,
+      "category": "Shonen",
+      "link": "Productos/Producto9.html",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/en/2/24/RuriDragon_vol._1_cover.jpg",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/9/1.jpg",
+        "https://cdn.dummyjson.com/product-images/9/2.png"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "KAIJU NO.8 (8Kaijuu)",
+      "description": "¡Un hombre, descontento con el trabajo que le ha tocado librar en la vida, se ve involucrado en un inesperado evento...! ¡Se convierte en un Kaijuu, una criatura monstruosa, lo que le dará una nueva oportunidad para lograr lo que siempre soñó!",
+      "price": 175,
+      "stock": 89,
+      "category": "Aventura",
+      "link": "Productos/Producto10.html",
+      "thumbnail": "https://imgsrv.crunchyroll.com/cdn-cgi/image/format=auto,fit=contain,width=480,height=720,quality=85/catalog/crunchyroll/bb5785a9fe043b8331b7842068bfcb05.jpe",
+      "images": [
+        "https://cdn.dummyjson.com/product-images/10/1.jpg",
+        "https://cdn.dummyjson.com/product-images/10/2.jpg"
+      ]
+    }
+  ]
+}

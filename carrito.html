@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compra</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <style>
+    .navbar-brand img {
+      margin-right: 20px;
+    }
+
+    .card {
+      transition: transform 0.3s;
+      height: 350px; /* Reducido para ajustar el tamaño */
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .footer {
+      background-color: #f8f9fa;
+      color: #495057;
+    }
+
+    /* Estilos para la tabla */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .total {
+      font-weight: bold;
+    }
+
+    .checkout {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <!-- Logotipo -->
+      <a class="navbar-brand" href="index.html">
+        <img src="logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-top">
+        MANGACKEET
+      </a>
+      <!-- Botón para dispositivos móviles -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Enlaces de navegación -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProductos" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Categorías 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownProductos">
+              <a class="dropdown-item" href="#">Mangas</a>
+              <a class="dropdown-item" href="#">Shonen</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="index.html">Ver todos los productos</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPerfil" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Perfil 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownPerfil">
+              <a class="dropdown-item" href="registro.html">Registro</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="login.html">Inicio de Sesión</a>
+            </div>
+          </li>
+        </ul>
+        <!-- Lista de deseos y carrito de compras -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="listadeseos.html"><i class="far fa-heart"></i></a>
+          </li>
+          <li class="nav-item">
+           <a class="nav-link" href="carrito.html"><i class="fas fa-shopping-cart"></i></a>
+          </li>
+        </ul>
+        <!-- Formulario de búsqueda -->
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Buscar productos" aria-label="Buscar">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+        <a href="https://www.facebook.com/profile.php?id=61558172912882&is_tour_dismissed" class="btn" target="_blank">
+            <img src="https://static.vecteezy.com/system/resources/previews/018/930/476/non_2x/facebook-logo-facebook-icon-transparent-free-png.png" alt="Icono de Facebook" style="width: 40px; height: 40px; vertical-align: middle;">
+      
+          </a>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container mt-5">
+    <h2 class="mb-4">Carrito de Compra</h2>
+    <div class="row">
+      <div class="col-md-8">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Descripción</th>
+              <th>Cantidad</th>
+              <th>Precio</th>
+              <th>Categoría</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="cart-items">
+            
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Resumen de compra</h5>
+            <p class="card-text">Total: $<span id="total"></span></span></p>
+            <div id="paypal-button-container"></div>
+
+            <script src="https://www.paypal.com/sdk/js?client-id=AfemmHZwQOmBgrywt1fqtxqsCJg87BDXFbdzxQROWzrQVDkwRCG7YMxLAjHXW5F2WPjjUKJjFiydL1JK&currency=MXN&components=buttons&enable-funding=venmo,paylater" data-sdk-integration-source="integrationbuilder_sc"></script>
+            <script>
+              var suma = 0;
+              var cart = []
+              cart = JSON.parse(localStorage.getItem("cart")) || [];
+              // Itera sobre los productos del carrito y los agrega a la tabla
+              cart.forEach(function(product){
+                suma += (product.price.toFixed(2) * product.quantity);
+              });
+              
+              var tot = 0 + suma;
+
+              paypal.Buttons({
+                style:{
+                  color: 'blue',
+                  shape: 'pill',
+                  label: 'pay'
+                },
+                createOrder: function(data, actions){
+                  return actions.order.create({
+                    purchase_units:[{
+                      amount: {
+                        value: tot
+                      }
+                    }]
+                  });
+                },
+                onApprove: function (data, actions) {
+                  actions.order.capture().then(function(detalles){
+                    var cartV = [];
+                    localStorage.setItem("cart", JSON.stringify(cartV));
+                    window.location.href="index.html";
+                  });
+                },
+                onCancel: function(data){
+                  alert("pago cancelado");
+
+                }
+              }).render('#paypal-button-container');
+            </script>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery y Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    var total = document.getElementById("total");
+    var suma = 0;
+    var cart = [];
+    $(document).ready(function(){
+      
+    var cartItems = $('#cart-items');
+    // Obtiene el carrito del localStorage
+    cart = JSON.parse(localStorage.getItem("cart")) || [];
+    // Itera sobre los productos del carrito y los agrega a la tabla
+    cart.forEach(function(product){
+        
+        var row = '<tr>';
+        row += '<td>' + product.title + '</td>';
+        row += '<td>' + product.description + '</td>';
+        row += '<td>' + product.quantity + '</td>';
+        row += '<td>$' + product.price.toFixed(2) + '</td>';
+        row += '<td>' + product.category + '</td>';
+        row += '<td><button class="btn btn-danger btn-sm" onclick="removeFromCart(' + product.id + ')">Eliminar</button></td>';
+        row += '</tr>';
+        cartItems.append(row);
+        suma += (product.price.toFixed(2) * product.quantity);
+    });
+    total.textContent = suma + ".00";
+    });
+
+    
+
+    // Función para eliminar un producto del carrito
+    function removeFromCart(productId){
+      // Encuentra el índice del producto en el carrito
+      var index = cart.findIndex(function(product){
+          return product.id === productId;
+      });
+      
+      if(index !== -1){ 
+          suma = 0;
+          // Elimina el producto del carrito
+          cart.splice(index, 1);
+          // actualzia el carrito
+          localStorage.setItem("cart", JSON.stringify(cart));
+          // Vacia el carrito
+          $('#cart-items').empty();
+          // Vuelve a llenar el carrito
+          cart.forEach(function(product){
+              var row = '<tr>';
+              row += '<td>' + product.title + '</td>';
+              row += '<td>' + product.description + '</td>';
+              row += '<td>$' + product.price.toFixed(2) + '</td>';
+              row += '<td>' + product.category + '</td>';
+              row += '<td>' + product.category + '</td>';
+              row += '<td><button class="btn btn-danger btn-sm" onclick="removeFromCart(' + product.id + ')">Eliminar</button></td>';
+              row += '</tr>';
+              $('#cart-items').append(row);
+              suma += (product.price.toFixed(2) * product.quantity);
+          });
+          total.textContent = suma + ".00";
+      }
+
+      window.location.href = "carrito.html";
+    }
+  </script>
+
+</body>
+</html>
