@@ -61,67 +61,39 @@
     </style>
     <script>
       function validarCredenciales() {
-        // Obtener los valores de usuario y contraseña del formulario
-        var usuario = document.getElementById("username").value;
-        var contraseña = document.getElementById("password").value;
+    // Obtener los valores de usuario y contraseña del formulario
+    var usuario = document.getElementById("username").value;
+    var contraseña = document.getElementById("password").value;
 
-        // Verificar las credenciales
-        if (usuario === "Admin" && contraseña === "12345678") {
-          // Si las credenciales son correctas, redirigir a panelAdmin.html
-          window.location.href = "panelAdmin.html";
-        } else {
-          // Si las credenciales son incorrectas, redirigir a index.html
-          window.location.href = "index.html";
-        }
-
-        // Evitar que el formulario se envíe normalmente
-        return false;
-      }
-    </script>
-  </head>
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-M595ZQX5NX"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
+    // Verificar las credenciales
+    if (usuario === "ricardomayorgaroman@gmail.com" && contraseña === "password") {
+        // Si las credenciales son correctas, redirigir a index.html
+        window.location.href = "index.html";
+    } else if (usuario === "equipoadmin@gmail.com") {
+        // Si el correo es "equipoadmin@gmail.com", redirigir a panelAdmin.html
+        window.location.href = "panelAdmin.html";
+    } else {
+        // Si las credenciales son incorrectas, mostrar un mensaje de error o redirigir a otra página
+        alert("Credenciales incorrectas. Inténtalo de nuevo.");
+        // Opcionalmente, puedes redirigir a otra página:
+        // window.location.href = "otra_pagina.html";
     }
-    gtag("js", new Date());
 
-    gtag("config", "G-M595ZQX5NX");
+    // Evitar que el formulario se envíe normalmente
+    return false;
+}
   </script>
-  <body>
-    <div id="login-container">
+</head>
+<body>
+  <div id="login-container">
       <form onsubmit="return validarCredenciales()">
-        <h2>Ingresa tu correo y contraseña para iniciar sesion</h2>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          placeholder="Usuario"
-          required
-        />
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Contraseña"
-          required
-        />
-        <input type="submit" value="Iniciar Sesión" />
+          <h2>Ingresa tu correo y contraseña para iniciar sesión</h2>
+          <input type="text" id="username" name="username" placeholder="Usuario" required />
+          <input type="password" id="password" name="password" placeholder="Contraseña" required />
+          <input type="submit" value="Iniciar Sesión" />
       </form>
-      <form action="panelAdmin.html" method="get">
-        <input type="submit" value="Admin" />
-      </form>
-    </div>
-
-    <div id="registro-container">
-      <form action="registro.html" method="get">
-        <h2>Aun no tienes cuenta?</h2>
-        <input type="submit" value="Registrarse" />
-      </form>
-    </div>
-  </body>
+      <!-- Otros elementos del formulario (si los hay) -->
+  </div>
+  <!-- Otros contenedores o formularios (si los hay) -->
+</body>
 </html>
