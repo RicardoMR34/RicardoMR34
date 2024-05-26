@@ -2,142 +2,142 @@
   "products": [
     {
       "id": 1,
-      "title": "One piece",
-      "description": "En la Gran Era Pirata, donde los océanos rugen con la promesa de aventuras y tesoros perdidos, una leyenda brilla más que ninguna otra",
-      "price": 140,
-      "stock": 110,
-      "category": "Aventura",
+      "title": "Playera del Real Madrid 2002",
+      "description": "Playera del Real Madrid de la temporada 2002-2003, utilizada por jugadores legendarios como Zidane y Ronaldo.",
+      "price": 250,
+      "stock": 15,
+      "category": "Equipos Europeos",
       "link": "Productos/Producto1.html",
-      "thumbnail": "https://imgsrv.crunchyroll.com/cdn-cgi/image/format=auto,fit=contain,width=480,height=720,quality=85/catalog/crunchyroll/757bae5a21039bac6ebace5de9affcd8.jpe",
+      "thumbnail": "https://www.oldfootballshirts.com/img/shirts/292/real-madrid-home-football-shirt-2002-2003-s_9461_1.jpg",
       "images": [
-        "https://cdn.dummyjson.com/product-images/1/1.jpg",
-        "https://cdn.dummyjson.com/product-images/1/2.jpg"
+        "https://media.karousell.com/media/photos/products/2023/2/27/real_madrid_jersey_2002_vintag_1677515798_c3a087b6_progressive.jpg",
+        "https://www.oldfootballshirts.com/img/shirts/292/real-madrid-home-football-shirt-2002-2003-s_9461_1.jpg"
       ]
     },
     {
       "id": 2,
-      "title": "Tokyo Ghoul",
-      "description": "Los habitantes de Tokio viven aterrados: en las sombras de la metrópolis se ocultan horribles monstruos que se camuflan entre la multitud, cazando y devorando seres humanos.",
-      "price": 180,
-      "stock": 90,
-      "category": "Gore",
-      "link": "Productos/Producto2.html",
-      "thumbnail": "https://imgsrv.crunchyroll.com/cdn-cgi/image/format=auto,fit=contain,width=480,height=720,quality=85/catalog/crunchyroll/6c496691df13a15aaf9be63caa7fc429.jpe",
+      "title": "Playera del Manchester United 1999",
+      "description": "Playera del Manchester United de la temporada 1998-1999, famosa por el 'treble' ganado bajo la dirección de Sir Alex Ferguson.",
+      "price": 300,
+      "stock": 10,
+      "category": "Equipos Europeos",
+      "link": "Productos/ManUnited1999.html",
+      "thumbnail": "https://i.ebayimg.com/thumbs/images/g/nRUAAOSwlhdmE89~/s-l640.jpg",
       "images": [
-        "https://cdn.dummyjson.com/product-images/2/1.jpg",
-        "https://cdn.dummyjson.com/product-images/2/2.jpg"
+        "https://example.com/images/man_united_1999_1.jpg",
+        "https://example.com/images/man_united_1999_2.jpg"
       ]
     },
     {
       "id": 3,
-      "title": "Jujutsu Kaisen",
-      "description": "Yuuji Itadori, un estudiante de secundaria, que posee una rara habilidad física, pasa sus días visitando a su abuelo que se encontra hospitalizado. Pero un día, espíritus malditos que duermen en su escuela, se liberan y aparecen criaturas fantasmas.",
-      "price": 110,
-      "stock": 36,
-      "category": "Shonen",
-      "link": "Productos/Producto3.html",
-      "thumbnail": "https://imgsrv.crunchyroll.com/cdn-cgi/image/format=auto,fit=contain,width=480,height=720,quality=85/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe",
+      "title": "Playera del poderoso America 2013",
+      "description": "Playera con la que el ave conquisto el titulo en 2013 con remontada",
+      "price": 1000,
+      "stock": 8,
+      "category": "Equipos Americano",
+      "link": "Productos/America.html",
+      "thumbnail": "https://cloudfront-eu-central-1.images.arcpublishing.com/diarioas/C4OBF6VOCZMDPA67OHWJ644LOU.jpg",
       "images": [
-        "https://cdn.dummyjson.com/product-images/2/1.jpg",
-        "https://cdn.dummyjson.com/product-images/2/2.jpg"
+        "https://example.com/images/fc_barcelona_2006_1.jpg",
+        "https://example.com/images/fc_barcelona_2006_2.jpg"
       ]
     },
     {
       "id": 4,
-      "title": "Boruto - Blue Vortex",
-      "description": "La memoria colectiva de la gente ha cambiado, y ahora la Villa de la Hoja va detrás de la vida de Boruto. Pese a las adversidades, alguien ha estado esperando junto a Sasuke después de abandonar la Villa.",
-      "price": 159,
-      "stock": 123,
-      "category": "Shonen",
-      "link": "Productos/Producto4.html",
-      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWX6EYGb1HGdzRY6OBVWU4pdvUjizl48O4HVFZJvdjIg&s",
+      "title": "Playera de la Selección de Brasil 2002",
+      "description": "Playera de la Selección de Brasil utilizada durante el Mundial 2002, en el que ganaron su quinto título.",
+      "price": 350,
+      "stock": 5,
+      "category": "Selecciones Nacionales",
+      "link": "Productos/Brasil2002.html",
+      "thumbnail": "https://i.etsystatic.com/5994892/r/il/6c5dbd/6039571797/il_fullxfull.6039571797_1knh.jpg",
       "images": [
-        "https://cdn.dummyjson.com/product-images/4/1.jpg",
-        "https://cdn.dummyjson.com/product-images/4/2.jpg"
+        "https://example.com/images/brasil_2002_1.jpg",
+        "https://example.com/images/brasil_2002_2.jpg"
       ]
     },
     {
       "id": 5,
-      "title": "Chainsaw Man",
-      "description": "Denji es un joven que alberga en su interior al demonio motosierra, ¡el mundialmente conocido Chainsaw Man!",
-      "price": 190,
-      "stock": 32,
-      "category": "Gore",
-      "link": "Productos/Producto5.html",
-      "thumbnail": "https://imgsrv.crunchyroll.com/cdn-cgi/image/format=auto,fit=contain,width=480,height=720,quality=85/catalog/crunchyroll/922742d9acaeba7d887ed11b6caab0e4.jpe",
+      "title": "Playera del AC Milan 2007",
+      "description": "Playera del AC Milan de la temporada 2006-2007, utilizada en su victoria en la Champions League.",
+      "price": 320,
+      "stock": 7,
+      "category": "Equipos Europeos",
+      "link": "Productos/ACMilan2007.html",
+      "thumbnail": "https://i.ebayimg.com/thumbs/images/g/q-YAAOSwxEtl5BzZ/s-l640.jpg",
       "images": [
-        "https://cdn.dummyjson.com/product-images/5/1.jpg",
-        "https://cdn.dummyjson.com/product-images/5/2.jpg"
+        "https://example.com/images/ac_milan_2007_1.jpg",
+        "https://example.com/images/ac_milan_2007_2.jpg"
       ]
     },
     {
       "id": 6,
-      "title": "Dragon Ball Super",
-      "description": "El tiempo transcurre, desde aquella gran batalla entre Goku y Majin Boo... ¡¡Ahora, en un mundo que recuperó la paz, se aproxima una nueva batalla!",
-      "price": 90,
-      "stock": 83,
-      "category": "Shonen",
-      "link": "Productos/Producto6.html",
-      "thumbnail": "https://imgsrv.crunchyroll.com/cdn-cgi/image/format=auto,fit=contain,width=480,height=720,quality=85/catalog/crunchyroll/98ea4207e23a2ea3e3af39ad641d8800.jpe",
+      "title": "Playera de la Selección de Argentina 1986",
+      "description": "Playera de la Selección de Argentina utilizada en el Mundial de 1986, destacada por la actuación de Diego Maradona.",
+      "price": 500,
+      "stock": 3,
+      "category": "Selecciones Nacionales",
+      "link": "Productos/Argentina1986.html",
+      "thumbnail": "https://i.pinimg.com/originals/8f/83/c7/8f83c783ec1e1c68dc7ff2420798524b.jpg",
       "images": [
-        "https://cdn.dummyjson.com/product-images/6/1.png",
-        "https://cdn.dummyjson.com/product-images/6/2.jpg"
+        "https://example.com/images/argentina_1986_1.jpg",
+        "https://example.com/images/argentina_1986_2.jpg"
       ]
     },
     {
       "id": 7,
-      "title": "Spy X Family",
-      "description": "El hábil espía Tasogare se dedicaba diariamente a cumplir misiones especiales por un mundo mejor. Un día recibe un complicado desafío... Su deber es crear una familia falsa y comenzar una nueva vida para poder cumplir la misión",
-      "price": 100,
-      "stock": 50,
-      "category": "Shonen",
-      "link": "Productos/Producto7.html",
-      "thumbnail": "https://imgsrv.crunchyroll.com/cdn-cgi/image/format=auto,fit=contain,width=480,height=720,quality=85/catalog/crunchyroll/095217fdb4f228410df09b18f151be28.jpe",
+      "title": "Playera del Juventus 1996",
+      "description": "Playera de la Juventus de la temporada 1995-1996, cuando ganaron la Champions League.",
+      "price": 275,
+      "stock": 12,
+      "category": "Equipos Europeos",
+      "link": "Productos/Juventus1996.html",
+      "thumbnail": "https://diablografico.com/wp-content/uploads/2022/08/juventus-96-3.jpg",
       "images": [
-        "https://cdn.dummyjson.com/product-images/7/1.jpg",
-        "https://cdn.dummyjson.com/product-images/7/2.jpg"
+        "https://example.com/images/juventus_1996_1.jpg",
+        "https://example.com/images/juventus_1996_2.jpg"
       ]
     },
     {
       "id": 8,
-      "title": "Kagurabachi",
-      "description": "Chihiro, un joven con aspiraciones de convertirse en un forjador de espadas, entrena todos los días bajo la tutela de su padre, un forjador de gran renombre.",
-      "price": 200,
-      "stock": 68,
-      "category": "Shonen",
-      "link": "Productos/Producto8.html",
-      "thumbnail": "https://upload.wikimedia.org/wikipedia/en/d/da/Kagurabachi_Volume_1_Cover.jpg",
+      "title": "Playera del Bayern Munich 2013",
+      "description": "Playera del Bayern Munich de la temporada 2012-2013, famosa por su 'triplete' histórico.",
+      "price": 290,
+      "stock": 9,
+      "category": "Equipos Europeos",
+      "link": "Productos/Bayern2013.html",
+      "thumbnail": "https://perufc.com/wp-content/uploads/2022/06/50843-1.jpg",
       "images": [
-        "https://cdn.dummyjson.com/product-images/8/1.jpg",
-        "https://cdn.dummyjson.com/product-images/8/2.jpg"
+        "https://example.com/images/bayern_2013_1.jpg",
+        "https://example.com/images/bayern_2013_2.jpg"
       ]
     },
     {
       "id": 9,
-      "title": "RuriDragon",
-      "description": "Esta es la historia de una dragona perezosa, que se esfuerza, pero preferiría no hacerlo. ¡Comienza una nueva serie!",
-      "price": 130,
-      "stock": 96,
-      "category": "Shonen",
-      "link": "Productos/Producto9.html",
-      "thumbnail": "https://upload.wikimedia.org/wikipedia/en/2/24/RuriDragon_vol._1_cover.jpg",
+      "title": "Playera de la Selección de Italia 2006",
+      "description": "Playera de la Selección de Italia utilizada en el Mundial 2006, donde se coronaron campeones.",
+      "price": 310,
+      "stock": 4,
+      "category": "Selecciones Nacionales",
+      "link": "Productos/Italia2006.html",
+      "thumbnail": "https://www.retrofootball.es/media/wysiwyg/2006-camiseta-italia.jpg",
       "images": [
-        "https://cdn.dummyjson.com/product-images/9/1.jpg",
-        "https://cdn.dummyjson.com/product-images/9/2.png"
+        "https://example.com/images/italia_2006_1.jpg",
+        "https://example.com/images/italia_2006_2.jpg"
       ]
     },
     {
       "id": 10,
-      "title": "KAIJU NO.8 (8Kaijuu)",
-      "description": "¡Un hombre, descontento con el trabajo que le ha tocado librar en la vida, se ve involucrado en un inesperado evento...! ¡Se convierte en un Kaijuu, una criatura monstruosa, lo que le dará una nueva oportunidad para lograr lo que siempre soñó!",
-      "price": 175,
-      "stock": 89,
-      "category": "Aventura",
-      "link": "Productos/Producto10.html",
-      "thumbnail": "https://imgsrv.crunchyroll.com/cdn-cgi/image/format=auto,fit=contain,width=480,height=720,quality=85/catalog/crunchyroll/bb5785a9fe043b8331b7842068bfcb05.jpe",
+      "title": "Playera del Liverpool 2005",
+      "description": "Playera del Liverpool de la temporada 2004-2005, recordada por la histórica victoria en la final de la Champions League en Estambul.",
+      "price": 270,
+      "stock": 6,
+      "category": "Equipos Europeos",
+      "link": "Productos/Liverpool2005.html",
+      "thumbnail": "https://perufc.com/wp-content/uploads/2022/06/Liverpool_2005_home_1.jpeg",
       "images": [
-        "https://cdn.dummyjson.com/product-images/10/1.jpg",
-        "https://cdn.dummyjson.com/product-images/10/2.jpg"
+        "https://example.com/images/liverpool_2005_1.jpg",
+        "https://example.com/images/liverpool_2005_2.jpg"
       ]
     }
   ]
